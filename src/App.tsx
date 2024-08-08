@@ -1,11 +1,29 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar/Sidebar';
+import HomePage from './pages/HomePage';
+import CommunitiesPage from './pages/CommunitiesPage';
+import BuildingsPage from './pages/BuildingsPage';
+import GeneralSettingsPage from './pages/GeneralSettingsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import LogOutPage from './pages/LogOutPage';
 
 
 const App = () => {
   return (
     <BrowserRouter>
+      <div className='flex items-start justify-between'>
         <Sidebar />
+        <div className='w-full h-full p-2'>
+          <Routes>
+            <Route path='/' element={<HomePage />}/>
+            <Route path='/communities' element={<CommunitiesPage />} />
+            <Route path='/buildings' element={<BuildingsPage />} />
+            <Route path='/general-settings' element={<GeneralSettingsPage />} />
+            <Route path='/privacy' element={<PrivacyPage />} />
+            <Route path='/logout' element={<LogOutPage />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   )
 }

@@ -7,16 +7,16 @@ const listOfMenu = [
         group: 'General',
         items: [
             { link: '/', icon: <User />, text: 'Profile' },
-            { link: '/', icon: <Users />, text: 'Communities' },
-            { link: '/', icon: <Building />, text: 'Buildings' },
+            { link: '/communities', icon: <Users />, text: 'Communities' },
+            { link: '/buildings', icon: <Building />, text: 'Buildings' },
         ],
     },
     {
         group: 'Settings',
         items: [
-            { link: '/', icon: <Settings />, text: 'General Settings' },
-            { link: '/', icon: <GlobeLock />, text: 'Privacy' },
-            { link: '/', icon: <LogIn />, text: 'Logs' },
+            { link: '/general-settings', icon: <Settings />, text: 'General Settings' },
+            { link: '/privacy', icon: <GlobeLock />, text: 'Privacy' },
+            { link: '/logout', icon: <LogIn />, text: 'Logs' },
         ],
     }
 ];
