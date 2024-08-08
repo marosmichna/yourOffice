@@ -1,12 +1,12 @@
-import Button from "@/components/ui/Button";
+import { BrowserRouter } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
 
 
-function App() {
-
+const App = () => {
   return (
-    <div>
-      <Button variant="secondary">Click Me</Button>
-    </div>
+    <BrowserRouter>
+        <Sidebar />
+    </BrowserRouter>
   )
 }
 
