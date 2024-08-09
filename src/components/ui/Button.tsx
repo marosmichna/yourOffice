@@ -26,4 +26,6 @@ const buttonVariants = cva(
     },
 );
 
+Button.displayName = "Button";
+
 export default Button;
