@@ -6,6 +6,7 @@ import BuildingsPage from './pages/BuildingsPage';
 import GeneralSettingsPage from './pages/GeneralSettingsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import LogOutPage from './pages/LogOutPage';
+import ProfilePages from './pages/ProfilePages';
 
 
 const App = () => {
@@ -13,9 +14,10 @@ const App = () => {
     <BrowserRouter>
       <div className='flex items-start justify-between'>
         <Sidebar />
-        <div className='w-full h-full p-2'>
+        <div className='w-full h-full'>
           <Routes>
             <Route path='/' element={<HomePage />}/>
+            <Route path='/profile' element={<ProfilePages />} />
             <Route path='/communities' element={<CommunitiesPage />} />
             <Route path='/buildings' element={<BuildingsPage />} />
             <Route path='/general-settings' element={<GeneralSettingsPage />} />
