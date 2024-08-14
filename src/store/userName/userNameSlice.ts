@@ -4,12 +4,14 @@ interface UserNameState {
     firstName: string;
     lastName: string;
     email: string;
+    isRegister: boolean;
 }
 
 const initialState: UserNameState = {
     firstName: "",
     lastName: "",
     email: "",
+    isRegister: false,
 }
 
 const userNameSlice = createSlice({
@@ -25,9 +27,12 @@ const userNameSlice = createSlice({
         setEmail: (state, action: PayloadAction<string>) => {
             state.email = action.payload;
         },
+        setIsRegister: (state, action: PayloadAction<boolean>) => {
+            state.isRegister = action.payload;
+        }
     },
 });
 
-export const { setFirstName, setLastName, setEmail } = userNameSlice.actions;
+export const { setFirstName, setLastName, setEmail, setIsRegister } = userNameSlice.actions;
 
 export default userNameSlice.reducer;

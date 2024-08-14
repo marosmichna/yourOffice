@@ -4,7 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "@/components/ui/Button";
 import { useDispatch } from "react-redux";
-import { setEmail, setFirstName, setLastName } from "@/store/userName/userNameSlice";
+import { setEmail, setFirstName, setLastName, setIsRegister } from "@/store/userName/userNameSlice";
 import { AppDispatch } from "@/store/store";
 
 const FormSchema = z.object({
@@ -33,6 +33,9 @@ const SignInForm = () => {
     dispatch(setFirstName(data.firstName));
     dispatch(setLastName(data.lastName));
     dispatch(setEmail(data.email));
+    if (data.firstName !== "" && data.lastName !== "" && data.email !== "") {
+       dispatch(setIsRegister(true));
+    }
   };
 
   return (
