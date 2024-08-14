@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import { useDispatch } from "react-redux";
 import { setEmail, setFirstName, setLastName, setIsRegister } from "@/store/userName/userNameSlice";
 import { AppDispatch } from "@/store/store";
+import { useNavigate } from "react-router-dom";
 
 const FormSchema = z.object({
   firstName: z
@@ -29,6 +30,8 @@ const SignInForm = () => {
 
   const dispatch = useDispatch<AppDispatch>();
 
+  const navigate = useNavigate();
+
   const onSubmit = (data: FieldValues) => {
     dispatch(setFirstName(data.firstName));
     dispatch(setLastName(data.lastName));
@@ -36,6 +39,7 @@ const SignInForm = () => {
     if (data.firstName !== "" && data.lastName !== "" && data.email !== "") {
        dispatch(setIsRegister(true));
     }
+    navigate("/communities");
   };
 
   return (
