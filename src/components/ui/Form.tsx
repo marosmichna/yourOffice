@@ -61,11 +61,13 @@ FormLabel.displayName = "FormLabel";
 
 type FormControlProps = React.InputHTMLAttributes<HTMLInputElement>;
 
-const FormControl = (props: FormControlProps) => {
-    return (
-        <Input {...props} />
-    );
-};
+const FormControl = React.forwardRef<HTMLInputElement, FormControlProps>(
+    (props, ref) => {
+      return (
+          <Input ref={ref} {...props} />
+      );
+    }
+  );
 
 FormControl.displayName = "FormControl";
 

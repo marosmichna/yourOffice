@@ -1,6 +1,6 @@
 
-
 const UserItem = () => {
+
   return (
     <div className="flex items-center gap-2 p-2 shadow">
       <div className="flex justify-center items-center w-10 h-10 bg-gray-300 rounded-full">UN</div>

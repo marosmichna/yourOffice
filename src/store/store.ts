@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import userNameReducer from "./userName/userNameSlice";
 
 export const store = configureStore({
     reducer: {
-
+        userName: userNameReducer,
     }
 });
 

@@ -6,7 +6,7 @@ const listOfMenu = [
     {
         group: 'General',
         items: [
-            { link: '/', icon: <User />, text: 'Profile' },
+            { link: '/profile', icon: <User />, text: 'Profile' },
             { link: '/communities', icon: <Users />, text: 'Communities' },
             { link: '/buildings', icon: <Building />, text: 'Buildings' },
         ],

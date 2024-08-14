@@ -1,5 +1,5 @@
 import { MenuItemType } from "@/models/Sidebar/sidebar";
-import H3 from "../ui/H3";
+import {H3} from "../ui/H3";
 import MenuItem from "./MenuItem";
 
 type MenuGroupProps = {
