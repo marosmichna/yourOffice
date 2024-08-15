@@ -8,6 +8,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import LogOutPage from './pages/LogOutPage';
 import ProfilePages from './pages/ProfilePages';
 import ProtectedRoutesPage from './pages/ProtectedRoutesPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
               <Route path='/privacy' element={<PrivacyPage />} />
               <Route path='/logout' element={<LogOutPage />} />
             </Route>
+            <Route path='/*' element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
