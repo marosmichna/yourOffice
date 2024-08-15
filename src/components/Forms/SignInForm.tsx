@@ -32,13 +32,23 @@ const SignInForm = () => {
 
   const navigate = useNavigate();
 
+  const capitalize = (firstLetter: string) => {
+    return firstLetter.charAt(0).toUpperCase() + firstLetter.slice(1).toLowerCase();
+  }
+
   const onSubmit = (data: FieldValues) => {
-    dispatch(setFirstName(data.firstName));
-    dispatch(setLastName(data.lastName));
+
+    const formattedFirstName = capitalize(data.firstName);
+    const formattedLastName = capitalize(data.lastName);
+
+    dispatch(setFirstName(formattedFirstName));
+    dispatch(setLastName(formattedLastName));
     dispatch(setEmail(data.email));
+
     if (data.firstName !== "" && data.lastName !== "" && data.email !== "") {
        dispatch(setIsRegister(true));
     }
+    
     navigate("/communities");
   };
 
