@@ -6,7 +6,7 @@ import BuildingsPage from './pages/BuildingsPage';
 import GeneralSettingsPage from './pages/GeneralSettingsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import LogOutPage from './pages/LogOutPage';
-import ProfilePages from './pages/ProfilePages';
+import ProfilePage from './pages/ProfilePage';
 import ProtectedRoutesPage from './pages/ProtectedRoutesPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -20,7 +20,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<HomePage />}/>
             <Route element={<ProtectedRoutesPage />}>
-              <Route path='/profile' element={<ProfilePages />} />
+              <Route path='/profile' element={<ProfilePage />} />
               <Route path='/communities' element={<CommunitiesPage />} />
               <Route path='/buildings' element={<BuildingsPage />} />
               <Route path='/general-settings' element={<GeneralSettingsPage />} />
