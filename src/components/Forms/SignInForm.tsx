@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { setEmail, setFirstName, setLastName, setIsRegister } from "@/store/userName/userNameSlice";
 import { AppDispatch } from "@/store/store";
 import { useNavigate } from "react-router-dom";
+import { capitalize } from "@/utils/formatedName";
 
 const FormSchema = z.object({
   firstName: z
@@ -32,9 +33,7 @@ const SignInForm = () => {
 
   const navigate = useNavigate();
 
-  const capitalize = (firstLetter: string) => {
-    return firstLetter.charAt(0).toUpperCase() + firstLetter.slice(1).toLowerCase();
-  }
+
 
   const onSubmit = (data: FieldValues) => {
 
