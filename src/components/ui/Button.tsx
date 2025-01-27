@@ -22,7 +22,7 @@ const buttonVariants = cva(
             },
         },
         defaultVariants: {
-            variant: 'primary',
+            variant: 'primary'
         },
     },
 );
