@@ -17,7 +17,7 @@ const App = () => {
     <BrowserRouter>
       <div className='flex items-start justify-between'>
         <Sidebar />
-        <div className='w-full h-full'>
+        <div className='w-full h-full pb-10'>
           <Routes>
             <Route path='/' element={<HomePage />}/>
             <Route element={<ProtectedRoutesPage />}>
