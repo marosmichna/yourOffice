@@ -13,6 +13,7 @@ import NotFoundPage from './pages/NotFoundPage';
 
 const App = () => {
   return (
+    <div className='h-screen overflow-hidden'>
     <BrowserRouter>
       <div className='flex items-start justify-between'>
         <Sidebar />
@@ -32,6 +33,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
+    </div>
   )
 }
 
